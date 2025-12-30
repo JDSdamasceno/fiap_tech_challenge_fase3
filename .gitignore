@@ -1,1 +1,18 @@
+# Ambiente Virtual
+.venv/
+venv/
+env/
+
+# Python (arquivos temporários)
+__pycache__/
+*.pyc
+
+# Dados Pesados (Limite do GitHub)
 Data/flights.csv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Bloco de Notas Temporário
+# Será excluido ao finalizar o Projeto
+bloco_de_notas.txt
