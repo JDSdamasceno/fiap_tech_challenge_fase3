@@ -1,0 +1,26 @@
+name: Python Linting (Flake8)
+
+on: [push, pull_request]
+
+jobs:
+  flake8-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 nbqa
+
+      - name: Run Flake8 on Python files
+        run: flake8 .
+
+      - name: Run Flake8 on Notebooks (using nbQA)
+        run: nbqa flake8 .
