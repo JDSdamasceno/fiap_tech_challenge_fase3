@@ -9,6 +9,7 @@ __pycache__/
 
 # Dados Pesados (Limite do GitHub)
 Data/flights.csv
+arquivos_parquet/
 *.parquet
 
 # Jupyter Notebook
